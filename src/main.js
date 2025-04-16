@@ -16,8 +16,8 @@ const form = document.querySelector('.form');
 const input = document.querySelector('input[name="search-text"]');
 
 // Обробник сабміту форми
-form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // Зупиняє перезавантаження сторінки
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Зупиняє перезавантаження сторінки
   const query = input.value.trim(); // Отримання значення пошуку
 
   if (!query) {
